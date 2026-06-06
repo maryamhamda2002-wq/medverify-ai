@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedVerify AI - SDG 3 Health Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛡️ MedVerify AI</h1>
+            <p>UN Sustainable Development Goal 3: Good Health & Well-being</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="scanner-section">
+            <h2>Scan Pharmaceutical Packaging</h2>
+            <p class="subtitle">Upload a photo of your packaging (e.g., Panadol, Calpol, Brufen) to verify safety compliance, authenticity, and clear dosage instructions.</p>
+            
+            <div class="drop-zone">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <div id="dropZoneText">
+                    <p>📸 Click or Drag & Drop Image here</p>
+                    <small>Supports JPG, PNG (Simulates packaging scan)</small>
+                </div>
+                <img id="imagePreview" alt="Preview" style="display: none; max-width: 100%; max-height: 200px; margin-top: 10px; border-radius: 6px;">
+            </div>
+            
+            <button id="scanBtn" class="btn" disabled>Analyze Verification Status</button>
+        </section>
+
+        <section id="resultSection" class="result-section" style="display: none;">
+            <h2>Analysis Report</h2>
+            <div id="statusBadge" class="badge"></div>
+            
+            <div class="info-card">
+                <h3>Product Details</h3>
+                <p><strong>Name:</strong> <span id="resName">-</span></p>
+                <p><strong>Clinical Purpose:</strong> <span id="resPurpose">-</span></p>
+                <p><strong>Safe Standard Dosage:</strong> <span id="resDosage">-</span></p>
+            </div>
+
+            <div class="sdg-card">
+                <h3>UN SDG Target 3 Alignment</h3>
+                <p id="resSdg">-</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MedVerify AI | Engineered for Global Health & Safety Workflows</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
